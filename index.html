@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .slide-left {
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+            z-index: 2;
+        }
+
+        .slide-left.active {
+            transform: translateX(0);
+            z-index: 3;
+        }
+
+        .slide-right {
+            transform: translateX(100%);
+            transition: transform 0.5s ease;
+            z-index: 2;
+        }
+
+        .slide-right.active {
+            transform: translateX(0);
+            z-index: 3;
+        }
+
+        /* Fade-in animation for text */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Bounce animation for MORE ABOUT button */
+        .bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center">
+    <div class="absolute min-h-screen w-full flex">
+        <div class="bg-white w-1/2 min-h-screen relative flex items-center justify-center">
+        </div>
+        <div class="bg-yellow-400 w-1/2 min-h-screen relative flex items-center justify-center">
+        </div>
+    </div>
+
+    <!-- Left side with an image -->
+    <div id="leftSide" class="bg-white w-1/2 min-h-screen relative flex flex-col items-center justify-center">
+        <div class="fade-in">
+            <img src="person.png" alt="Image Description" class="w-40vw h-40vw">
+        </div>
+        <div id="moreAbout" class="text-center text-3xl mt-10 cursor-pointer fade-in">
+            Someone IDK
+        </div>
+        <div class="flex mt-10">
+            <div id="leftMoreAboutBtn"
+                class="flex text-center text-mg bg-yellow-300 p-4 rounded-lg justify-center items-center cursor-pointer bounce">
+                <img src="left-chevron.png" alt="Image Description" class="w-4 h-3 mr-2 rotate-90">
+                MORE ABOUT
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side with a yellow background -->
+    <div id="rightSide" class="bg-yellow-400 w-1/2 min-h-screen relative flex flex-col items-center justify-center">
+        <div class="fade-in">
+            <img src="tayler.png" alt="Image Description" class="w-40vw h-40vw">
+        </div>
+        <div id="moreAbout" class="text-center text-3xl mt-10 cursor-pointer fade-in">
+            Taylor Swift
+        </div>
+        <div class="flex mt-10">
+            <div id="rightMoreAboutBtn"
+                class="flex text-center text-mg bg-white p-4 rounded-lg justify-center items-center cursor-pointer bounce">
+                MORE ABOUT
+                <img src="next.png" alt="Image Description" class="w-4 h-3 ml-2 rotate-90">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById( "rightMoreAboutBtn" ).addEventListener( "click", function ()
+        {
+            document.getElementById( "rightSide" ).classList.add( "slide-left" );
+            setTimeout( function ()
+            {
+                window.location.href = "taylor.html";
+            }, 500 );
+        } );
+
+        document.getElementById( "leftMoreAboutBtn" ).addEventListener( "click", function ()
+        {
+            document.getElementById( "leftSide" ).classList.add( "slide-right" );
+            setTimeout( function ()
+            {
+                window.location.href = "person.html";
+            }, 500 );
+        } );
+    </script>
+
+</body>
+
+</html>
