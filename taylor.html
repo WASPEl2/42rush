@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>CV</title>
+    <style>
+        /* Add custom styles for the navigation text */
+        .nav-link {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom color classes for skills */
+        .skill-html {
+            --tw-bg-opacity: 1;
+            background-color: rgba(255, 99, 132, var(--tw-bg-opacity));
+        }
+
+        .skill-css {
+            --tw-bg-opacity: 1;
+            background-color: rgba(54, 162, 235, var(--tw-bg-opacity));
+        }
+
+        .skill-js {
+            --tw-bg-opacity: 1;
+            background-color: rgba(255, 206, 86, var(--tw-bg-opacity));
+        }
+
+        .skill-java {
+            --tw-bg-opacity: 1;
+            background-color: rgba(75, 192, 192, var(--tw-bg-opacity));
+        }
+
+        .skill-python {
+            --tw-bg-opacity: 1;
+            background-color: rgba(153, 102, 255, var(--tw-bg-opacity));
+        }
+
+        .skill-c {
+            --tw-bg-opacity: 1;
+            background-color: rgba(255, 159, 64, var(--tw-bg-opacity));
+        }
+
+        .skill-cplusplus {
+            --tw-bg-opacity: 1;
+            background-color: rgba(255, 99, 71, var(--tw-bg-opacity));
+        }
+
+        .skill-csharp {
+            --tw-bg-opacity: 1;
+            background-color: rgba(0, 128, 128, var(--tw-bg-opacity));
+        }
+    </style>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll( 'a[href^="#"]' ).forEach( anchor =>
+        {
+            anchor.addEventListener( 'click', function ( e )
+            {
+                e.preventDefault();
+
+                document.querySelector( this.getAttribute( 'href' ) ).scrollIntoView( {
+                    behavior: 'smooth'
+                } );
+            } );
+        } );
+    </script>
+</head>
+
+<body class="bg-yellow-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 p-4 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-8"> <!-- Increased space-x from 4 to 8 -->
+                <img src="42logo.png" alt="Logo" class="h-8">
+                <a href="index.html" class="text-white nav-link">Home</a>
+                <a href="#about" class="text-white nav-link">About</a>
+                <a href="#education" class="text-white nav-link">Education</a>
+                <a href="#skill" class="text-white nav-link">Skill</a>
+                <a href="#contact" class="text-white nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8 p-4"> <!-- Adjust the margin-left value -->
+        <!-- Picture and Info Section -->
+        <div class="text-center lg:text-left lg:ml-4 lg:pt-16" id="about"> <!-- Reduced left margin -->
+            <img src="taylor.png" alt="person" class="h-300 w-300 rounded-full mb-2 mx-auto py-10 lg:mx-0">
+            <!-- Adjust size and shape as needed -->
+            <div class="lg:pl-4 max-w-4xl"> <!-- Reduced left padding -->
+                <h2 class="text-4xl font-bold mb-4">Taylor Swift</h2> <!-- Increased margin-bottom from 2 to 4 -->
+                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis
+                    dictum odio ut commodo. Curabitur eu scelerisque orci.
+                    Suspendisse nunc nulla, vestibulum et blandit sit amet, condimentum ultricies felis.Nulla eu turpis
+                    viverra dui venenatis bibendum.
+                    Pellentesque laoreet vestibulum tortor non dignissim. Nulla vitae orci at nisl laoreet blandit
+                    mollis quis ipsum. Sed sit amet tincidunt ante, vel eleifend tortor.
+                    Donec consectetur faucibus erat, at efficitur est consequat ut. Donec viverra ipsum mi.
+                </p> <!-- Increased margin-bottom from 2 to 4 -->
+            </div>
+        </div>
+    
+        <!-- Education Section -->
+        <div class="ml-auto max-w-4xl text-center lg:text-right lg:mr-4 lg:mb-8 lg:pt-16" id="education">
+            <!-- Reduced right margin -->
+            <h2 class="text-4xl font-bold mb-4">Education</h2> <!-- Increased margin-bottom from 2 to 4 -->
+            <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis magna sit
+                amet turpis aliquam tincidunt et posuere odio.
+                Curabitur magna elit, rutrum a gravida nec, malesuada vel neque. Orci varius natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus.
+                In efficitur elementum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut
+                pretium justo, venenatis tincidunt felis.
+                Nam lobortis, sapien quis malesuada tincidunt, lectus massa dictum velit, finibus dapibus leo metus
+                tincidunt dolor.
+                Quisque ac mauris nisi. Mauris dapibus consequat nisi at ultrices. Proin elit tortor, porttitor sit amet
+                sagittis id, imperdiet in est.</p> <!-- Increased margin-bottom from 2 to 4 -->
+        </div>
+    
+        <!-- Skill Section -->
+        <div class="text-left ml-4 mb-8" id="skill"> <!-- Reduced left margin -->
+            <h2 class="text-4xl font-bold mb-4">Skills</h2> <!-- Increased margin-bottom from 2 to 4 -->
+    
+            <!-- HTML Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">HTML</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-html h-full rounded-full" style="width: 80%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- CSS Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">CSS</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-css h-full rounded-full" style="width: 75%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- JavaScript Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">JavaScript</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-js h-full rounded-full" style="width: 70%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- Java Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">Java</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-java h-full rounded-full" style="width: 65%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- Python Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">Python</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-python h-full rounded-full" style="width: 60%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- C Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">C</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-c h-full rounded-full" style="width: 55%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- C++ Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">C++</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-cplusplus h-full rounded-full" style="width: 50%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+    
+            <!-- C# Progress Bar -->
+            <div class="mb-4">
+                <p class="text-gray-700 mb-2">C#</p>
+                <div class="bg-gray-300 h-8 w-full rounded-full">
+                    <div class="skill-csharp h-full rounded-full" style="width: 45%;"></div>
+                    <!-- Adjust width based on proficiency -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- Contact Section -->
+        <div class="text-right mr-4" id="contact"> <!-- Reduced right margin -->
+            <h2 class="text-4xl font-bold mb-4">Contact</h2> <!-- Increased margin-bottom from 2 to 4 -->
+    
+            <!-- Icon Section -->
+            <div class="flex items-center justify-end space-x-4">
+                <a href="https://github.com/"><i class="fab fa-github text-4xl text-gray-700"></i></a> <!-- GitHub Icon -->
+                <a href="https://web.facebook.com/"><i class="fab fa-facebook text-4xl text-gray-700"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram text-4xl text-gray-700"></i></a>
+                <a href="https://mail.google.com/mail/"><i class="fas fa-email text-4xl text-gray-700"></i></a>
+                <!-- Phone Icon -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
